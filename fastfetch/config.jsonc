@@ -1,0 +1,101 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "~/Downloads/lain.jpg",
+    "width": 32,
+    "height": 20,
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    }
+  },
+  "display": {
+    "separator": " : ",
+    "color": {
+      "keys": "white",
+      "title": "white"
+    },
+    "constants": [
+      "─────────────────────"
+    ]
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "┌{$1}Software{$1}┐",
+      "outputColor": "white"
+    },
+    {
+      "type": "os",
+      "key": "OS         ",
+      "keyColor": "red"
+    },
+    {
+      "type": "initsystem",
+      "key": "Init System",
+      "keyColor": "red"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel     ",
+      "keyColor": "red"
+    },
+    {
+      "type": "shell",
+      "key": "Shell      ",
+      "keyColor": "red"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime     ",
+      "keyColor": "red"
+    },
+    {
+      "type": "packages",
+      "key": "Packages   ",
+      "keyColor": "red"
+    },
+    {
+      "type": "wm",
+      "key": "WM         ",
+      "keyColor": "red"
+    },
+    {
+      "type": "custom",
+      "format": "├{$1}Hardware{$1}┤",
+      "outputColor": "white"
+    },
+    {
+      "type": "cpu",
+      "key": "CPU        ",
+      "keyColor": "red"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU {}      ",
+      "keyColor": "red"
+    },
+    {
+      "type": "memory",
+      "key": "RAM        ",
+      "keyColor": "red"
+    },
+    {
+      "type": "swap",
+      "key": "Swap       ",
+      "keyColor": "red"
+    },
+    {
+      "type": "disk",
+      "key": "Disk       ",
+      "keyColor": "red"
+    },
+    {
+      "type": "custom",
+      "format": "└{$1}────────{$1}┘",
+      "outputColor": "white"
+    },
+    "break",
+    "colors"
+  ]
+}
