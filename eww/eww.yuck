@@ -1,0 +1,40 @@
+(defpoll time :interval "10s"
+  "date '+%H:%M | %b %d, %Y'")
+
+(deflisten active-workspace :initial "..." "bash ~/.config/eww/scripts/get-active-workspace")
+
+(deflisten user :initial "[USER]"
+ `whoami`)
+
+(defwindow cassiebar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0px"
+                               :width "100%"
+                               :height "20px"
+                               :anchor "top center")
+           :reserve (struts :distance "0px" :side "top")
+	   :exclusive true
+(box :class "fill"
+     :space-evenly false
+     :halgin "end"
+    (box :class "content" 
+         :orientation "horizontal" 
+         :halign "end" 
+         :space-evenly false 
+      "󰨇 " 
+      active-workspace)
+    (box :class "content"
+         :orientation "horizontal"
+         :halign "end"
+         :space-evenly false
+           "Be docile and be quiet. Give and do not take.")
+    (clock :text time)) 
+)
+
+(defwidget clock [text]
+  (box :class "content"
+       :orientation "horizontal"
+       :halign "end"
+    text)
+)
