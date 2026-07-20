@@ -16,7 +16,9 @@
       "title": "white"
     },
     "constants": [
-      "─────────────────────"
+      "─────────────────────",
+      "foo",
+      "bar"
     ]
   },
   "modules": [
@@ -87,7 +89,7 @@
     },
     {
       "type": "disk",
-      "key": "Disk       ",
+      "key": "lua:local args = ...; if args.mountpoint == '/' then return 'Disk /     ' end if args.mountpoint == '/mnt/games' then return 'Disk /mnt/󰮃' end if args.mountpoint == '/mnt/media' then return 'Disk /mnt/' end if args.mountpoint == '/mnt/temp' then return 'Disk /mnt/󱊟' end return 'Disk      '",
       "keyColor": "red"
     },
     {
@@ -95,7 +97,9 @@
       "format": "└{$1}────────{$1}┘",
       "outputColor": "white"
     },
-    "break",
-    "colors"
+    {
+      "type": "custom",
+      "format": "  {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}   {#90}  {#91}  {#92}  {#93}  {#94}  {#95}  {#96}  {#97} "
+    }
   ]
 }
